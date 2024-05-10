@@ -1,38 +1,54 @@
-[gd_scene load_steps=3 format=3 uid="uid://c8tj8gnnxnjgw"]
+[gd_scene load_steps=8 format=3 uid="uid://c8tj8gnnxnjgw"]
 
 [ext_resource type="Texture2D" uid="uid://b0vo0hqfpgrwu" path="res://RetroObjectSprite.png" id="1_4lkn0"]
-[ext_resource type="Script" path="res://transparent.gd" id="2_6cdvw"]
+[ext_resource type="Script" path="res://Scripts/transparent.gd" id="2_6cdvw"]
+[ext_resource type="Script" path="res://Scripts/AppleManager.cs" id="3_x66w6"]
+[ext_resource type="PackedScene" uid="uid://cxnsssya72bk5" path="res://tailpiece.tscn" id="4_2xx6g"]
+[ext_resource type="Script" path="res://Scripts/PlayerMovement.cs" id="4_gdam5"]
+[ext_resource type="Script" path="res://Scripts/ClassicManager.cs" id="5_jhx62"]
+[ext_resource type="Texture2D" uid="uid://bu6gupniks41i" path="res://GridSquare.png" id="7_oagf7"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Main" type="Node2D"]
 script = ExtResource("2_6cdvw")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Player" type="Node2D" parent="."]
+
+[node name="PlayerVisual" type="Sprite2D" parent="Player"]
+z_index = 1
 texture_filter = 1
-texture_repeat = 1
-scale = Vector2(4, 4)
 texture = ExtResource("1_4lkn0")
 
-[node name="Sprite2D2" type="Sprite2D" parent="."]
-texture_filter = 1
-texture_repeat = 1
-position = Vector2(-128, 0)
-scale = Vector2(4, 4)
-texture = ExtResource("1_4lkn0")
+[node name="PlayerScript" type="Node" parent="Player"]
+script = ExtResource("4_gdam5")
 
-[node name="Sprite2D3" type="Sprite2D" parent="."]
-texture_filter = 1
-texture_repeat = 1
-position = Vector2(-256, 0)
-scale = Vector2(4, 4)
-texture = ExtResource("1_4lkn0")
+[node name="TailPiece" parent="." instance=ExtResource("4_2xx6g")]
 
-[node name="Sprite2D4" type="Sprite2D" parent="."]
-texture_filter = 1
-texture_repeat = 1
-position = Vector2(-384, 0)
-scale = Vector2(4, 4)
-texture = ExtResource("1_4lkn0")
+[node name="TailPiece2" parent="." instance=ExtResource("4_2xx6g")]
+
+[node name="TailPiece3" parent="." instance=ExtResource("4_2xx6g")]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 texture_filter = 1
 texture_repeat = 1
+
+[node name="Apples" type="Node2D" parent="."]
+script = ExtResource("3_x66w6")
+
+[node name="ClassicManager" type="Node" parent="."]
+script = ExtResource("5_jhx62")
+
+[node name="Score" type="Label" parent="."]
+offset_left = -800.0
+offset_top = -450.0
+offset_right = -718.0
+offset_bottom = -424.0
+text = "Score: 0"
+
+[node name="Grid" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+z_index = -1
+texture_filter = 1
+texture_repeat = 2
+texture = ExtResource("7_oagf7")
+region_enabled = true
+region_rect = Rect2(0.5, -0.5, 1568, 864)

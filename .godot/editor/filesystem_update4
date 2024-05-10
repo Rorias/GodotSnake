@@ -1,2 +1,5 @@
 res://Snake.tscn
-res://transparent.gd
+res://Scripts/Apple.cs
+res://Scripts/AppleManager.cs
+res://Scripts/ClassicManager.cs
+res://Scripts/PlayerMovement.cs

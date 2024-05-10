@@ -1,2 +1,5 @@
-Camera2D
 Sprite2D
+Label
+Node
+Node2D
+Camera2D

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cxnsssya72bk5"]
+
+[ext_resource type="Texture2D" uid="uid://b0vo0hqfpgrwu" path="res://RetroObjectSprite.png" id="1_v70uv"]
+
+[node name="TailPiece" type="Node2D"]
+
+[node name="TailPieceVisual" type="Sprite2D" parent="."]
+texture_filter = 1
+texture_repeat = 1
+texture = ExtResource("1_v70uv")
