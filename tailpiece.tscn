@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://b0vo0hqfpgrwu" path="res://RetroObjectSprite.png" id="1_v70uv"]
 
 [node name="TailPiece" type="Node2D"]
+process_mode = 1
 
 [node name="TailPieceVisual" type="Sprite2D" parent="."]
 texture_filter = 1

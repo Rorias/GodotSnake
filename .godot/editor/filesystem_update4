@@ -3,3 +3,5 @@ res://Scripts/Apple.cs
 res://Scripts/AppleManager.cs
 res://Scripts/ClassicManager.cs
 res://Scripts/PlayerMovement.cs
+res://apple.tscn
+res://tailpiece.tscn

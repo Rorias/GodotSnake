@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b0vo0hqfpgrwu" path="res://RetroObjectSprite.png" id="2_2dsn4"]
 
 [node name="AppleObject" type="Node2D"]
+process_mode = 1
 texture_filter = 1
 
 [node name="AppleScript" type="Node" parent="."]

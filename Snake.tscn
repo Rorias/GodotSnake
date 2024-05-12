@@ -12,6 +12,7 @@
 script = ExtResource("2_6cdvw")
 
 [node name="Player" type="Node2D" parent="."]
+process_mode = 1
 
 [node name="PlayerVisual" type="Sprite2D" parent="Player"]
 z_index = 1
@@ -35,6 +36,7 @@ texture_repeat = 1
 script = ExtResource("3_x66w6")
 
 [node name="ClassicManager" type="Node" parent="."]
+process_mode = 3
 script = ExtResource("5_jhx62")
 
 [node name="Score" type="Label" parent="."]
