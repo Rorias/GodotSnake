@@ -1,15 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "Py5QBbaIgWzlrnrWOVQu7WxHggOPxBOEm3M6JBjcwSDa4vLvksasj0LdMcfAa1mKdUXKMcl3ngXnPkF20n1OoA==",
+  "dgSpecHash": "ImpmfYpDWqf8Emxq3QHIcGVuE/wzIAjUPXX4eVQNudhspWBoCC4H2M2s3AgSbsEIxY+whN/goknUeJ0acpGPcw==",
   "success": true,
   "projectFilePath": "C:\\Data\\Godot Games\\GodotSnake\\GodotSnake.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\l_m99\\.nuget\\packages\\godot.sourcegenerators\\4.2.1\\godot.sourcegenerators.4.2.1.nupkg.sha512",
     "C:\\Users\\l_m99\\.nuget\\packages\\godotsharp\\4.2.1\\godotsharp.4.2.1.nupkg.sha512",
-    "C:\\Users\\l_m99\\.nuget\\packages\\godotsharpeditor\\4.2.1\\godotsharpeditor.4.2.1.nupkg.sha512",
     "C:\\Users\\l_m99\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.29\\microsoft.netcore.app.ref.6.0.29.nupkg.sha512",
+    "C:\\Users\\l_m99\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\6.0.29\\microsoft.netcore.app.runtime.win-x64.6.0.29.nupkg.sha512",
     "C:\\Users\\l_m99\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.29\\microsoft.windowsdesktop.app.ref.6.0.29.nupkg.sha512",
-    "C:\\Users\\l_m99\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.29\\microsoft.aspnetcore.app.ref.6.0.29.nupkg.sha512"
+    "C:\\Users\\l_m99\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\6.0.29\\microsoft.windowsdesktop.app.runtime.win-x64.6.0.29.nupkg.sha512",
+    "C:\\Users\\l_m99\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.29\\microsoft.aspnetcore.app.ref.6.0.29.nupkg.sha512",
+    "C:\\Users\\l_m99\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\6.0.29\\microsoft.aspnetcore.app.runtime.win-x64.6.0.29.nupkg.sha512"
   ],
   "logs": []
 }
