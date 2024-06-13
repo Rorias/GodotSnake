@@ -220,7 +220,6 @@ C:\Data\Godot Games\GodotSnake\.godot\mono\temp\bin\ExportDebug\win-x64\dbgshim.
 C:\Data\Godot Games\GodotSnake\.godot\mono\temp\bin\ExportDebug\win-x64\hostfxr.dll
 C:\Data\Godot Games\GodotSnake\.godot\mono\temp\bin\ExportDebug\win-x64\hostpolicy.dll
 C:\Data\Godot Games\GodotSnake\.godot\mono\temp\bin\ExportDebug\win-x64\mscordaccore.dll
-C:\Data\Godot Games\GodotSnake\.godot\mono\temp\bin\ExportDebug\win-x64\mscordaccore_amd64_amd64_6.0.2924.17105.dll
 C:\Data\Godot Games\GodotSnake\.godot\mono\temp\bin\ExportDebug\win-x64\mscordbi.dll
 C:\Data\Godot Games\GodotSnake\.godot\mono\temp\bin\ExportDebug\win-x64\mscorrc.dll
 C:\Data\Godot Games\GodotSnake\.godot\mono\temp\bin\ExportDebug\win-x64\msquic.dll
@@ -237,3 +236,4 @@ C:\Data\Godot Games\GodotSnake\.godot\mono\temp\obj\ExportDebug\win-x64\refint\G
 C:\Data\Godot Games\GodotSnake\.godot\mono\temp\obj\ExportDebug\win-x64\GodotSnake.pdb
 C:\Data\Godot Games\GodotSnake\.godot\mono\temp\obj\ExportDebug\win-x64\GodotSnake.genruntimeconfig.cache
 C:\Data\Godot Games\GodotSnake\.godot\mono\temp\obj\ExportDebug\win-x64\ref\GodotSnake.dll
+C:\Data\Godot Games\GodotSnake\.godot\mono\temp\bin\ExportDebug\win-x64\mscordaccore_amd64_amd64_6.0.3124.26714.dll

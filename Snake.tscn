@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://c8tj8gnnxnjgw"]
+[gd_scene load_steps=9 format=3 uid="uid://c8tj8gnnxnjgw"]
 
 [ext_resource type="Texture2D" uid="uid://b0vo0hqfpgrwu" path="res://RetroObjectSprite.png" id="1_4lkn0"]
 [ext_resource type="Script" path="res://Scripts/transparent.gd" id="2_6cdvw"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cxnsssya72bk5" path="res://tailpiece.tscn" id="4_2xx6g"]
 [ext_resource type="Script" path="res://Scripts/PlayerMovement.cs" id="4_gdam5"]
 [ext_resource type="Script" path="res://Scripts/ClassicManager.cs" id="5_jhx62"]
+[ext_resource type="Script" path="res://Scripts/PowerupManager.cs" id="6_40wl2"]
 [ext_resource type="Texture2D" uid="uid://bu6gupniks41i" path="res://GridSquare.png" id="7_oagf7"]
 
 [node name="Main" type="Node2D"]
@@ -34,6 +35,9 @@ texture_repeat = 1
 
 [node name="Apples" type="Node2D" parent="."]
 script = ExtResource("3_x66w6")
+
+[node name="Powerups" type="Node2D" parent="."]
+script = ExtResource("6_40wl2")
 
 [node name="ClassicManager" type="Node" parent="."]
 process_mode = 3

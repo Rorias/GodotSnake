@@ -71,7 +71,7 @@ public partial class Apple : Node
 		//GD.Print(newYpos + " new y");
 		
 		_this.Position = new Vector2(newXpos*32, newYpos*32);
-		//GD.Print(_this.Position);
+		//GD.Print("apple located at " + _this.Position);
 		for (int i = 0; i < partyManager.partyMembers.Count; i++)
 		{
 			if (partyManager.partyMembers[i].Position == _this.Position)

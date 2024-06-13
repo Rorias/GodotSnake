@@ -11,6 +11,7 @@ public partial class PlayerMovement : Node
 	private Node2D lastPiece;
 	
 	private AppleManager appleManager;
+	private PowerupManager powerupManager;
 	private ClassicManager classicManager;
 	private PlayerMovement playerMovement;
 
@@ -41,6 +42,7 @@ public partial class PlayerMovement : Node
 		partyMembers.Add(GetNode<Node2D>("/root/Main/TailPiece3"));
 		
 		appleManager = GetNode<AppleManager>("/root/Main/Apples");
+		powerupManager = GetNode<PowerupManager>("/root/Main/Powerups");
 		classicManager = GetNode<ClassicManager>("/root/Main/ClassicManager");
 		
 		lastPiece = GetNode<Node2D>("/root/Main/TailPiece3");
@@ -52,6 +54,7 @@ public partial class PlayerMovement : Node
 		var _delta = (float)delta;
 		
 		EatApple();
+		EatPowerup();
 
 		if (currentDirection == lastDirection) { currentDirection = new Vector2(0,0); }
 
@@ -83,7 +86,7 @@ public partial class PlayerMovement : Node
 
 		if (!isMoving)
 		{
-			if (invFramesDuration < 0)
+			if (invFramesDuration < 0 && !powerupManager.invincible)
 			{
 				for (int i = 0; i < partyMembers.Count; i++)
 				{
@@ -172,17 +175,51 @@ public partial class PlayerMovement : Node
 					invFramesDuration = fixedMoveDuration * 4f;
 				}
 
-				var newPiece = snakePiecePrefab.Instantiate();
-				AddChild(newPiece);
-				newPiece.GetNode<Node2D>(".").Position = lastPiece.Position;
-				partyMembers.Add(newPiece.GetNode<Node2D>("."));
-				lastPiece = newPiece.GetNode<Node2D>(".");
-
+				if (!powerupManager.noGrow)
+				{
+					var newPiece = snakePiecePrefab.Instantiate();
+					AddChild(newPiece);
+					newPiece.GetNode<Node2D>(".").Position = lastPiece.Position;
+					newPiece.GetNode<CanvasItem>("./TailPieceVisual").Modulate = lastPiece.GetNode<CanvasItem>("./TailPieceVisual").Modulate;
+					partyMembers.Add(newPiece.GetNode<Node2D>("."));
+					lastPiece = newPiece.GetNode<Node2D>(".");
+				}
+				
 				classicManager.AddScore(appleManager.apples[i].GetNode<Apple>("./AppleScript").appleValue);
 
 				appleManager.CreateNewApple();
 
 				appleManager.RemoveApple(appleManager.apples[i]);
+			}
+		}
+	}
+	
+	private void EatPowerup()
+	{
+		for (int i = 0; i < powerupManager.powerups.Count; i++)
+		{
+			if (_this.Position == powerupManager.powerups[i].Position)
+			{
+				//GD.Print("is touching the powerup");
+				switch (powerupManager.powerups[i].GetNode<Powerup>("./PowerupScript").type)
+				{
+					case 0:
+						powerupManager.noGrow = true;
+						break;
+					case 1:
+						powerupManager.invincible = true;
+						break;
+					default:
+						break;
+				}
+
+				for (int c = 0; c < partyMembers.Count; c++)
+				{
+					partyMembers[c].GetNode<CanvasItem>("./TailPieceVisual").Modulate = powerupManager.powerups[i].GetNode<CanvasItem>("./PowerupVisual").Modulate;
+				}
+
+				powerupManager.powerups[i].GetNode<Powerup>("./PowerupScript").powerupActivated = true;
+				powerupManager.RemovePowerup(powerupManager.powerups[i]);
 			}
 		}
 	}
